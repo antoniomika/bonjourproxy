@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    - name: Login to GitHub Docker Registry
+      run: docker login docker.pkg.github.com -u antoniomika -p ${{ secrets.GITHUB_TOKEN }}
     - name: Build the Docker image
       run: docker build -t docker.pkg.github.com/antoniomika/bonjourproxy/bonjourproxy:latest .
     - name: Push the Docker image
