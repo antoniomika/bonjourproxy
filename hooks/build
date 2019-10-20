@@ -1,3 +1,5 @@
+#!/bin/bash
+
 docker run --privileged linuxkit/binfmt:v0.7
 mkdir -p ~/.docker/cli-plugins && wget https://github.com/docker/buildx/releases/download/v0.3.0/buildx-v0.3.0.linux-amd64 -O ~/.docker/cli-plugins/docker-buildx && chmod a+x ~/.docker/cli-plugins/docker-buildx
 docker buildx create --name builder && docker buildx use builder && docker buildx inspect --bootstrap && docker buildx ls
