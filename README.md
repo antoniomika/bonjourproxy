@@ -40,6 +40,11 @@ docker run -itd \
     antoniomika/bonjourproxy:latest
 ```
 
+MultiArch Builds
+----------------
+
+This project supports builds for arm and amd64 hosts, which can be found [here](https://hub.docker.com/r/antoniomika/bonjourproxy).
+
 CLI Flags
 ---------
 
