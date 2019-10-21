@@ -1,4 +1,4 @@
-FROM golang:1.12.5-alpine as builder
+FROM golang:1.13.2-alpine as builder
 LABEL maintainer="Antonio Mika <me@antoniomika.me>"
 
 ENV GOCACHE /gocache
